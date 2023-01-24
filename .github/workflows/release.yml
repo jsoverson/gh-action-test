@@ -29,6 +29,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: ${{ inputs.version }} release
+          tagging_message: ${{ inputs.version }}
 
       # - name: Commit and tag
       #   env:

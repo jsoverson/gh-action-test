@@ -4,10 +4,14 @@ function env(name: string): string {
   return val;
 }
 
-const files = env("FILES").split(/\s*,\s*/);
-const version = env("VERSION");
+const files = env('FILES').split(/\s*,\s*/);
+const version = env('VERSION');
 
-console.log("Updating versions in files");
+if (!version.match(/^v\d+\.\d+\.\d+$/)) {
+  throw new Error('VERSION must be in the form v1.2.3');
+}
+
+console.log('Updating versions in files');
 
 for (const file of files) {
   console.log(`Updating ${file} for ${version}...`);
