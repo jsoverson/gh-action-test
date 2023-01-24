@@ -44,9 +44,8 @@ apex --help
 
 Output:
 
-```console{title="apex help"}
-  Usage:   apex
-  Version: v5.5.5
+```console{title="apex help"}  Usage:   apex
+  Version: v0.0.18
 
   Description:
 
@@ -69,8 +68,7 @@ Output:
     run          [tasks...]          - Run tasks.
     upgrade                          - Upgrade apex executable to latest or given version.
     help         [command]           - Show this help or the help of a sub-command.
-    completions                      - Generate shell completions.
-```
+    completions                      - Generate shell completions.```
 
 ## Running tests
 
