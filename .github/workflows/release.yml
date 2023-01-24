@@ -24,13 +24,17 @@ jobs:
         run: |
           deno run --allow-run --allow-env --allow-write --allow-read ./.github/workflows/release.ts
           deno run --allow-run --allow-env --allow-write --allow-read ./.github/workflows/update-readme.ts
-      - name: Commit and tag
-        env:
-          VERSION: ${{ inputs.version }}
-        run: |
-          git config --global user.email "team@candle.dev"
-          git config --global user.name "Release Bot"
-          git add apex.ts README.md
-          git commit -am "$VERSION release"
-          git tag $VERSION
-          git push --tags
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: ${{ inputs.version }} release
+
+      # - name: Commit and tag
+      #   env:
+      #     VERSION: ${{ inputs.version }}
+      #   run: |
+      #     git config --global user.email "team@candle.dev"
+      #     git config --global user.name "Release Bot"
+      #     git add apex.ts README.md
+      #     git commit -am "$VERSION release"
+      #     git tag $VERSION
+      #     git push --tags
