@@ -27,6 +27,8 @@ jobs:
       - name: Commit and tag
         env:
           VERSION: ${{ inputs.version }}
-        run: git add apex.ts README.md
-          echo git commit -am "$VERSION release"
+        run: |
+          git add apex.ts README.md
+          git commit -am "$VERSION release"
           git tag $VERSION
+          git push --tags
