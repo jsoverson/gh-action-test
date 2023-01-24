@@ -22,7 +22,7 @@ Install `deno` with instructions
 To install a release version of the `apex` CLI, run the command below:
 
 ```
-deno install -A --unstable -f -n apex https://deno.land/x/apex_cli@v0.1.15/apex.ts
+deno install -A --unstable -f -n apex https://deno.land/x/apex_cli@v0.0.16/apex.ts
 ```
 
 To install from source, clone this repository and run `./apex run install`
