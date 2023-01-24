@@ -22,7 +22,7 @@ import { findApexConfig, setupLogger } from "./src/utils.ts";
 import { parseConfigYaml } from "./src/config.ts";
 
 // Version bump this on release.
-const version = "v0.0.15";
+const version = "v4.4.4";
 
 const args = Deno.args;
 
