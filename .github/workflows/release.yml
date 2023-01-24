@@ -35,6 +35,7 @@ jobs:
         with:
           generateReleaseNotes: true
           makeLatest: true
+          tag: ${{ inputs.version }}
 
       # - name: Commit and tag
       #   env:
