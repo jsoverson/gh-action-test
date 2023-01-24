@@ -6,9 +6,9 @@ on:
       version:
         description: 'Version to release'
         required: true
-    update_files:
-      version:
+      files:
         description: 'Files to update with version number'
+        type: string
         required: true
         default: 'apex.ts, README.md'
 jobs:
