@@ -28,6 +28,8 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
         run: |
+          git config --global user.email "team@candle.dev"
+          git config --global user.name "Release Bot"
           git add apex.ts README.md
           git commit -am "$VERSION release"
           git tag $VERSION
