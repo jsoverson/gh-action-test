@@ -30,6 +30,11 @@ jobs:
         with:
           commit_message: ${{ inputs.version }} release
           tagging_message: ${{ inputs.version }}
+      - name: Create Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          generateReleaseNotes: true
+          makeLatest: true
 
       # - name: Commit and tag
       #   env:
